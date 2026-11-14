@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+kaggle.json
+.kaggle/
+
+# Data
+data/
+datasets/
+
+# Model and experiment artifacts
+artifacts/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+*.keras
+mlruns/
+mlartifacts/
+.optuna/
+
+# DVC cache
+.dvc/cache/
+
+# Logs
+*.log
+logs/
+reports/generated/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,13 @@
+# Provisional. Confirm the actual Kaggle folder structure before use.
+dataset:
+  name: diabetic-retinopathy-224x224-gaussian-filtered
+  source: https://www.kaggle.com/datasets/sovitrath/diabetic-retinopathy-224x224-gaussian-filtered
+  root: /kaggle/input
+  image_size: 224
+  num_classes: 5
+  class_names: [no_dr, mild, moderate, severe, proliferative]
+
+split:
+  strategy: pending_dataset_audit
+  seed: 42
+  patient_level: required_when_identifiers_are_available

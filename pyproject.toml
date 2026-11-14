@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "retina-explainable-screening"
+version = "0.1.0"
+description = "Explainable deep learning research prototype for diabetic retinopathy screening"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "torch",
+  "torchvision",
+  "timm",
+  "numpy",
+  "pandas",
+  "scikit-learn",
+  "opencv-python-headless",
+  "albumentations",
+  "Pillow",
+  "matplotlib",
+  "seaborn",
+  "PyYAML",
+  "tqdm",
+]
+
+[project.optional-dependencies]
+tracking = ["mlflow", "optuna"]
+api = ["fastapi", "uvicorn[standard]", "python-multipart"]
+explainability = ["grad-cam"]
+dev = ["pytest", "pytest-cov", "ruff", "mypy", "ipykernel"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

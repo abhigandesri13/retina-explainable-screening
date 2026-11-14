@@ -1,0 +1,13 @@
+task:
+  type: multiclass_classification
+  num_classes: 5
+
+candidates:
+  - resnet50
+  - efficientnetv2_s
+  - convnext_tiny
+
+pretrained: true
+image_size: 224
+
+# Final architecture and resolution will be selected from validation experiments.
